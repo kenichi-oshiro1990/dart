@@ -9405,8 +9405,8 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                         return -1;
                     return 0;
                 });
-                sortedArtifacts.forEach(function (id, updated_at) {
-                    (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("id:" + id + "\r\n" + "updated_at:" + updated_at);
+                sortedArtifacts.forEach(function (id, update_at) {
+                    (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("id:" + id + "\r\n" + "update_at:" + update_at);
                 });
                 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo Sorted OK");
                 i = 0;

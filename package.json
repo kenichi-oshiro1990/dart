@@ -1,10 +1,9 @@
 {
   "name": "da",
-
   "author": "",
   "license": "MIT",
   "version": "0.0.0",
- "type": "module",
+  "type": "module",
   "files": [
     "action.yml",
     "dist"

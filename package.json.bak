@@ -4,7 +4,7 @@
   "author": "",
   "license": "MIT",
   "version": "0.0.0",
- "type": "module",
+  "type": "module",
   "files": [
     "action.yml",
     "dist"
@@ -26,6 +26,4 @@
     "pack": "ncc build -m",
     "all": "npm run format && npm run lint && npm test && npm run build && npm run pack"
 }
-}
-
 }

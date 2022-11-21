@@ -35,14 +35,18 @@ const main = async () => {
             return 0;
         });
 
+        sortedArtifacts.forEach(function(id, updated_at){
+            info("id:" + id + "\r\n" + "updated_at:" + updated_at )
+        });  
+
         info("listArtifactsForRepo Sorted OK");
 
         for (let i = 0; i < counter - remainingCount; i++) {
 
             const artifact_id : number= sortedArtifacts[i].id;
-            info("update_at:" + sortedArtifacts[i].updated_at || "null");
             info("id:" + artifact_id.toString());
-
+            info("update_at:" + sortedArtifacts[i].updated_at || "null");
+        
             await appOctokit.rest.actions.deleteArtifact({
                 owner,
                 repo,

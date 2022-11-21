@@ -40,7 +40,7 @@ const main = async () => {
         for (let i = 0; i < counter - remainingCount; i++) {
 
             const artifact_id : number= sortedArtifacts[i].id;
-            info("update_at" + sortedArtifacts[i].updated_at || "null");
+            info("update_at:" + sortedArtifacts[i].updated_at || "null");
             info("id:" + artifact_id.toString());
 
             await appOctokit.rest.actions.deleteArtifact({

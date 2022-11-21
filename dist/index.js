@@ -9411,7 +9411,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
             case 2:
                 if (!(i < counter - remainingCount)) return [3 /*break*/, 5];
                 artifact_id = sortedArtifacts[i].id;
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("update_at" + sortedArtifacts[i].updated_at || 0);
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("update_at:" + sortedArtifacts[i].updated_at || 0);
                 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("id:" + artifact_id.toString());
                 return [4 /*yield*/, appOctokit.rest.actions.deleteArtifact({
                         owner: owner,

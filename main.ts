@@ -20,7 +20,9 @@ const main = async () => {
         const resArtifacts = await appOctokit.rest.actions.listArtifactsForRepo({
             owner,
             repo
-        })
+        });
+
+        info("listArtifactsForRepo OK");
 
         const counter = resArtifacts.data.total_count;
 
@@ -31,6 +33,8 @@ const main = async () => {
             if (a.updated_at < b.updated_at) return -1;
             return 0;
         });
+
+        info("listArtifactsForRepo Sorted OK");
 
         for (let i = 0; i < counter - remainingCount; i++) {
 

@@ -9391,6 +9391,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                     })];
             case 1:
                 resArtifacts = _a.sent();
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo OK");
                 counter = resArtifacts.data.total_count;
                 sortedArtifacts = resArtifacts.data.artifacts.sort(function (a, b) {
                     if (a.updated_at === null)
@@ -9403,6 +9404,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                         return -1;
                     return 0;
                 });
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo Sorted OK");
                 i = 0;
                 _a.label = 2;
             case 2:

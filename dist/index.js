@@ -9393,7 +9393,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                 resArtifacts = _a.sent();
                 counter = resArtifacts.data.total_count;
                 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo OK");
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("artifact count:" + counter.toString());
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("artifact count:" + counter.toString() + "\r\n");
                 sortedArtifacts = resArtifacts.data.artifacts.sort(function (a, b) {
                     if (a.updated_at === null)
                         return 0;
@@ -9406,16 +9406,16 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                     return 0;
                 });
                 sortedArtifacts.forEach(function (artifact) {
-                    (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("id:" + artifact.id.toString() + "\r\n" + "update_at:" + artifact.updated_at);
+                    (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("id:" + artifact.id.toString() + "\r\n" + "update_at:" + artifact.updated_at + "\r\n");
                 });
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo Sorted OK");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo Sorted OK" + "\r\n");
                 i = 0;
                 _a.label = 2;
             case 2:
                 if (!(i < counter - remainingCount)) return [3 /*break*/, 5];
                 artifact_id = sortedArtifacts[i].id;
                 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("id:" + artifact_id.toString());
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("update_at:" + sortedArtifacts[i].updated_at || 0);
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("update_at:" + sortedArtifacts[i].updated_at + "\r\n" || 0);
                 return [4 /*yield*/, appOctokit.rest.actions.deleteArtifact({
                         owner: owner,
                         repo: repo,

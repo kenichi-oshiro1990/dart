@@ -25,7 +25,7 @@ const main = async () => {
         const counter = resArtifacts.data.total_count;
 
         info("listArtifactsForRepo OK");
-        info("artifact count:" +  counter.toString());
+        info("artifact count:" +  counter.toString() + "\r\n");
 
         const sortedArtifacts = resArtifacts.data.artifacts.sort(function (a, b) {
             if (a.updated_at === null) return 0;
@@ -36,16 +36,16 @@ const main = async () => {
         });
 
         sortedArtifacts.forEach(function(artifact){
-            info("id:" + artifact.id.toString() + "\r\n" + "update_at:" + artifact.updated_at )
+            info("id:" + artifact.id.toString() + "\r\n" + "update_at:" + artifact.updated_at + "\r\n")
         });  
 
-        info("listArtifactsForRepo Sorted OK");
+        info("listArtifactsForRepo Sorted OK" + "\r\n");
 
         for (let i = 0; i < counter - remainingCount; i++) {
 
             const artifact_id : number= sortedArtifacts[i].id;
             info("id:" + artifact_id.toString());
-            info("update_at:" + sortedArtifacts[i].updated_at || "null");
+            info("update_at:" + sortedArtifacts[i].updated_at + "\r\n" || "null" + "\r\n");
         
             await appOctokit.rest.actions.deleteArtifact({
                 owner,

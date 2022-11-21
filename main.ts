@@ -3,12 +3,12 @@ import { Octokit } from "@octokit/rest";
 
 const authToken = getInput("token");
 const ownerRepo = getInput("ownerRepo");
-// const existsCount = getInput("existsCount");
+const existsCount = getInput("existsCount");
 
 const main = async () => {
 
     try {
-//        const remainingCount = parseInt(existsCount);
+        const remainingCount = parseInt(existsCount);
         const spliter = ownerRepo.split('/');
         const owner = spliter[0];
         const repo = spliter[1];
@@ -36,8 +36,7 @@ const main = async () => {
 
         info("listArtifactsForRepo Sorted OK");
 
-//        for (let i = 0; i < counter - remainingCount; i++) {
-    for (let i = 0; i < counter - 1; i++) {
+        for (let i = 0; i < counter - remainingCount; i++) {
 
             const artifact_id : number= sortedArtifacts[i].id;
             info("update_at" + sortedArtifacts[i].updated_at || "null");

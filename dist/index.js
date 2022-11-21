@@ -9371,14 +9371,13 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 var authToken = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("token");
 var ownerRepo = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("ownerRepo");
-var existsCount = (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput)("existsCount");
+// const existsCount = getInput("existsCount");
 var main = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var remainingCount, spliter, owner, repo, appOctokit, resArtifacts, counter, sortedArtifacts, i, artifact_id, error_1;
+    var spliter, owner, repo, appOctokit, resArtifacts, counter, sortedArtifacts, i, artifact_id, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 6, , 7]);
-                remainingCount = parseInt(existsCount);
                 spliter = ownerRepo.split('/');
                 owner = spliter[0];
                 repo = spliter[1];
@@ -9408,7 +9407,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                 i = 0;
                 _a.label = 2;
             case 2:
-                if (!(i < counter - remainingCount)) return [3 /*break*/, 5];
+                if (!(i < counter - 1)) return [3 /*break*/, 5];
                 artifact_id = sortedArtifacts[i].id;
                 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("update_at" + sortedArtifacts[i].updated_at || 0);
                 (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("id:" + artifact_id.toString());

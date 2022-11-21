@@ -22,9 +22,10 @@ const main = async () => {
             repo
         });
 
-        info("listArtifactsForRepo OK");
-
         const counter = resArtifacts.data.total_count;
+
+        info("listArtifactsForRepo OK");
+        info("artifact count:" +  counter.toString());
 
         const sortedArtifacts = resArtifacts.data.artifacts.sort(function (a, b) {
             if (a.updated_at === null) return 0;

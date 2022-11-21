@@ -9391,8 +9391,9 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                     })];
             case 1:
                 resArtifacts = _a.sent();
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo OK");
                 counter = resArtifacts.data.total_count;
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo OK");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("artifact count:" + counter.toString());
                 sortedArtifacts = resArtifacts.data.artifacts.sort(function (a, b) {
                     if (a.updated_at === null)
                         return 0;

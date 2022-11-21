@@ -35,8 +35,8 @@ const main = async () => {
             return 0;
         });
 
-        sortedArtifacts.forEach(function(id, update_at){
-            info("id:" + id + "\r\n" + "update_at:" + update_at )
+        sortedArtifacts.forEach(function(artifact){
+            info("id:" + artifact.id.toString() + "\r\n" + "update_at:" + artifact.updated_at )
         });  
 
         info("listArtifactsForRepo Sorted OK");

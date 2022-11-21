@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "ES5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "jsx": "preserve",                                /* Specify what JSX code is generated. */
 
     /* Modules */
@@ -12,10 +12,11 @@
 
     /* JavaScript Support */
     "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
-
+    "declaration": true,
+    "newLine": "lf",
     /* Emit */
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
-    "outDir": "./",                                   /* Specify an output folder for all emitted files. */
+    "outDir": "dist",                                   /* Specify an output folder for all emitted files. */
 
     /* Interop Constraints */
     "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
@@ -30,6 +31,5 @@
   "exclude": [
     "node_modules", 
     "**/*.test.ts",
-    "build/**/*"
   ]
 }

@@ -9385,7 +9385,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                 appOctokit = new _octokit_rest__WEBPACK_IMPORTED_MODULE_1__/* .Octokit */ .v({
                     auth: authToken,
                 });
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo:Start" + "\r\n");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("*** listArtifactsForRepo:Start ***");
                 return [4 /*yield*/, appOctokit.rest.actions.listArtifactsForRepo({
                         owner: owner,
                         repo: repo
@@ -9393,8 +9393,8 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
             case 1:
                 resArtifacts = _a.sent();
                 counter = resArtifacts.data.total_count;
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo:End" + "\r\n");
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("artifact count:" + counter.toString() + "\r\n");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("*** listArtifactsForRepo:  End ***" + "\r\n");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("*** Artifact count:" + counter.toString() + " ***" + "\r\n");
                 sortedArtifacts = resArtifacts.data.artifacts.sort(function (a, b) {
                     if (a.updated_at === null)
                         return 0;
@@ -9406,13 +9406,13 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                         return -1;
                     return 0;
                 });
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo Sort:Start" + "\r\n");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("*** listArtifactsForRepo Sort:Start ***");
                 sortedArtifacts.forEach(function (artifact) {
                     (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("id:" + artifact.id.toString() + "\r\n" + "update_at:" + artifact.updated_at + "\r\n");
                 });
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsForRepo Sort:End" + "\r\n");
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("Delete Artifacts Count:" + (counter - remainingCount).toString() + "\r\n");
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsArray Loop:Start" + "\r\n");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("*** listArtifactsForRepo Sort:  End ***" + "\r\n");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("*** Delete Artifacts Count:" + (counter - remainingCount).toString() + " ***");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("*** listArtifactsArray Loop:Start ***");
                 i = 0;
                 _a.label = 2;
             case 2:
@@ -9432,7 +9432,7 @@ var main = function () { return __awaiter(void 0, void 0, void 0, function () {
                 i++;
                 return [3 /*break*/, 2];
             case 5:
-                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("listArtifactsArray Loop:End" + "\r\n");
+                (0,_actions_core__WEBPACK_IMPORTED_MODULE_0__.info)("*** listArtifactsArray Loop:  End ***" + "\r\n");
                 return [3 /*break*/, 7];
             case 6:
                 error_1 = _a.sent();
